@@ -1,0 +1,111 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar. 19, 2023, 5:16:42 p.m.
+    Author     : Olivier
+*/
+:root{
+  --main-color: #28353b;
+  --second-color: #fe6152;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--second-color);
+}
+
+main {
+  flex: 1;
+   padding-bottom: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--main-color);
+}
+
+div.match-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.match {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 20px;
+  width: 50%;
+  margin: 10px;
+}
+
+/* Test couleur*/
+div.match:first-child {
+  background-color: #f98f85;
+}
+
+div.match:nth-child(2) {
+  background-color: #a2aff1;
+}
+
+div.match:nth-child(3) {
+  background-color: #92f491;
+}
+/* Test couleur */
+
+div.match img {
+  height: 75px;
+  width: 75px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+div.match p {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+div.match p a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px;
+}
+
+div.match p a:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+div.match button {
+  background-color: var(--second-color);
+  color: white;
+  border: 1px black solid;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+div.match button:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Site de rencontre - Connexion/Inscription</title>
+        <link type="text/css" rel="stylesheet" href="/css/header.css">
+        <link type="text/css" rel="stylesheet" href="/css/footer.css">
+        <link type="text/css" rel="stylesheet" href="/css/connexionEtInscription.css">
+
+    </head>
+
+
+    <body style="background-color: #fe6152;">
+    <th:block th:replace="inclusion/headerConnexionInscription.html"></th:block>
+        <main>
+            <div class="description">
+
+
+                <img style="text-align: center; height: 150px; font-style: italic; margin-bottom: 120px" src="/images/logo/logo-Inscription-no-background.png" alt="logo">
+
+
+                <!-- Formulaire de connexion -->
+
+                <form id="signupForm" method="get" class="form-horizontal"
+                      action="inscriptionController">
+
+
+                   
+                        <label  class="col-sm-4 control-label" for="sexe"> Sexe : </label>
+                        <div class="col-sm-5 col-sm-offset-4">
+                            <label class="radio-inline" for="gender_male"> <input type="radio"
+                                                                                  id="gender_male" value="m" name="sexe">Homme
+                            </label> <label  class="radio-inline" for="gender_female"> <input type="radio"
+                                                                                              id="gender_female" value="f" name="sexe">Femme
+                            </label>
+
+                        </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="prenom">Prenom:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="prenom"
+                                   name="prenom" placeholder="prenom" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="nom">Nom:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="nom"
+                                   name="nom" placeholder="nom" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="email">Email :</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="email"
+                                   name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="mot_passe">Mot de passe :</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="password"
+                                   name="mot_passe" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="confirm_password">Confirmation du mot de passe</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control"
+                                   id="confirm_password1" name="confirm_password"
+                                   placeholder="Confirm password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-4 control-label" for="status"> Status : </label>
+                        <div class="col-sm-5 col-sm-offset-4">
+                            <label class="radio-inline" for="active"> <input type="radio"
+                                                                             id="active" value="m" name="status">Active
+                            </label> <label  class="radio-inline" for="desactive"> <input type="radio"
+                                                                                          id="desactive" value="des" name="status">Désactive
+                            </label>
+
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label  class="col-sm-4 control-label" for="photo">Photo : </label>
+                        <div class="col-sm-5">      
+                            <input type="file"
+                                   name="photo" class="form-control" id="photo" title ="La photo est obligatoire"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-4 control-label" for="role">Choix du role : </label>
+                        <div class="col-sm-5">      
+                            <select class="custom-select" name="role" title = "Choisissez un role" required>
+
+
+
+                                <option value="Admin">Admin</option>
+                                <option value="Vendeur">Classic</option>
+                                <option value="Assistant">Deluxe</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-4">
+
+                            <!-- 
+                         <input type="submit"  class="btn btn-primary btn-lg" 
+                                value="Inscription"  id="submit" disabled="disabled" />
+                            -->
+                            <input type="submit"  class="btn btn-primary btn-lg" 
+                                   value="Inscription"  id="submit"  />
+
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <a href="Connexion.html"><p style="text-align: center">Vous avez déjà un compte? <br>Cliquez ici pour vous connecter!</p></a>
+            </div>
+        </main>
+    <th:block th:replace="inclusion/footer.html"></th:block>
+    </body>
+</html>
+
+
+
+
+
+
+

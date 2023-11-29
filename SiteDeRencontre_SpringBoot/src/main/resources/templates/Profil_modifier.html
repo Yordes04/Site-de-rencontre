@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Profil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/css/header.css">
+    <link type="text/css" rel="stylesheet" href="/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="/css/profil.css">
+</head>
+<body>
+<th:block th:replace="inclusion/header.html"></th:block>
+<main>
+    <!-- Code à rajouter-->
+    <h1 style="font: bold; font-size: 30px">  <%=session.getAttribute("nom")%>,  Vous êtes connecté à Matchez-Moi! </h1>
+    <marquee> Matchez-Moi!  </marquee>
+    <!-- Code à rajouter-->
+    <h1 id="main-title">A propos</h1>
+    <div class="about">
+        <h1>Profil</h1>
+        <div class="about-content">
+            <img src="/images/photoProfil/<%=session.getAttribute()%>" alt="">
+            <ul>
+                <li>Nom: <span><%=session.getAttribute("nom")  %></span></li>
+                <li>Age: <span><%=session.getAttribute("age")  %></span></li>
+                <li>Sexe: <span><%=session.getAttribute("sexe")  %></span></li>
+                <li>Orientation: <span><%=session.getAttribute("orientation")  %></span></li>
+                <li>Region: <span><%=session.getAttribute("orientation")  %></span></li>
+                <li>Role: <span><%=session.getAttribute("orientation")  %></span></li>
+            </ul>
+        </div>
+        <div class="about-contact">
+            <button>Retour</button>
+        </div>
+    </div>
+
+    <div class="description">
+        <h1>Description</h1>
+        <div class="description-content">
+            <p><span><%=session.getAttribute("description") %></span>
+            </p>
+        </div>
+        <div class="description-modification">
+            <button>Modifier</button>
+        </div>
+    </div>
+
+    <div class="passion">
+        <h1>Passion</h1>
+        <ul>
+            <li><span>Sports</span></li>
+            <li><span>Cuisine</span></li>
+            <li><span>Technologie</span></li>
+        </ul>
+        <div class="passion-modification">
+            <button>Modifier</button>
+        </div>
+    </div>
+
+    <div class="favoris">
+        <h1>Favoris</h1>
+        <div class="favoris-liste">
+            <figure>
+                <img src="/images/photoProfil/Lois.png"
+                     alt="">
+                <figcaption>
+                    <a href="">Lois Griffin</a>
+                    <button>X</button>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/images/photoProfil/Lois.png"
+                     alt="">
+                <figcaption>
+                    <a href="">Lois Griffin</a>
+                    <button>X</button>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/images/photoProfil/Lois.png"
+                     alt="">
+                <figcaption>
+                    <a href="">Lois Griffin</a>
+                    <button>X</button>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/images/photoProfil/Lois.png"
+                     alt="">
+                <figcaption>
+                    <a href="">Lois Griffin</a>
+                    <button>X</button>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/images/photoProfil/Lois.png"
+                     alt="">
+                <figcaption>
+                    <a href="">Lois Griffin</a>
+                    <button>X</button>
+                </figcaption>
+            </figure>
+        </div>
+
+        <ul class="btr-pager">
+            <li class="btr-pager-prev">
+                <button class="btn-prev" disabled=""><i class="arrow left"></i></button>
+            </li>
+            <li class="btr-pager-mid">
+                <span>Page</span>
+                <input class="btr-pager-cur" type="text" value="1" wtx-context="1C7F430D-D525-46FA-916E-B07CA6DABE03" style="width: 32px;">
+                <span>of <span class="btr-pager-total">2</span></span>
+            </li>
+            <li class="btr-pager-next">
+                <button class="btn-next"><i class="arrow right"></i></button>
+            </li>
+        </ul>
+
+    </div>
+
+</main>
+<th:block th:replace="inclusion/footer.html"></th:block>
+</body>
+
+</html>

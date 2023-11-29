@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* Global Styles */
+
+
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	max-width: 1200px;
+	padding-left: 25px;
+	padding-right: 25px;
+  background-color: #fe6152;
+}
+
+
+
+.header_presentation {
+  text-align: center;
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white; 
+  margin: 10px auto;
+  padding: 2rem;
+  justify-content: space-between;
+  padding-top: 150px;
+  
+ 
+}
+
+
+.header_presentation .saturnGraphic {
+	width: 259px;
+	border-radius: 50%;
+	height: 259px;
+	
+  padding-left: 50px;
+	
+}
+
+hr {
+	background-color: #F67A53;
+	height: 5px;
+}
+
+/* Start here */
+h1 {
+	margin: 0;
+	font-size: 36px;
+	font-family: Gotham, Tahoma, sans-serif;
+	text-align: left;
+	color: #F67A53;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	
+}
+
+
+/*Animation pour texte magie*/
+
+.animation {
+	display: flex;
+	justify-content: justify;
+	align-items: center;
+	color: #6F6F6F;
+	
+	font-family: Raleway;
+	font-weight: bold;
+  }
+  
+  .type_style {
+	  width: 21.5ch;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  border-right: 4px solid #6F6F6F;
+	  animation: cursor 1s step-start infinite, 
+	  text 5s steps(18) alternate infinite;
+  }
+  
+  @keyframes cursor {
+	  0%, 100% { 
+	  border-color: #4d4d4d; 
+	}
+  }
+  
+  @keyframes text {
+	  0% { 
+	  width: 0; 
+	}
+	  100% { 
+	  width: 32.5ch; 
+	}
+  }
+
+
+
+
+
+  .message-button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 25px;
+  }
+  
+  /*Animation pour le bouton message*/
+  .message-button {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease-in-out;
+  }
+  
+  .message-button:hover {
+	background-color: #2E8B57;
+  }
+
+
+
+
+
+
+.presentation{
+	background-color: white;
+	margin: 20px auto;
+        padding: 4rem;
+        justify-content: justify;
+}
+
+
+
+
+
+
+
+p {
+	font-size: 14px;
+	font-family: sans-serif;
+	color: #6F6F6F;
+	font-weight:  500;
+	line-height: 22px;
+  text-align: justify;
+  
+}
+
+
+
+
+
+
+
+
+
+/* Style pour le titre de la présentation */
+.titre_presentation h1{
+	color: rgb(255, 145, 0);
+	
+  }
+
+
+
+
+/* Desktops and laptops  */
+@media only screen and (min-width:1025px) {
+/* Header */
+header .profileLogo .logoPlaceholder {
+	float: left;
+	margin-bottom: 50px;
+}
+header .saturnGraphic {
+	float: left;
+	clear: both;
+	margin-right: 3%;
+}
+header .profileHeader {
+	text-align: left;
+	padding-top: 10%;
+  padding-right: 50px;
+  
+}
+
+
+
+
+
+/* Style pour après la présentation  */
+.image {
+	width: 40em;
+	margin: auto;
+  
+}
+
+circle {
+	stroke: #fff;
+	stroke-width: 5;
+	fill: transparent;
+	stroke-linecap: round;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	animation: dash 2s ease-in-out forwards;
+	animation-delay: calc(var(--i) * 0.35s);
+}
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 1;
+		fill: transparent;
+	}
+	50%,
+	80% {
+		stroke-dashoffset: 0;
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		fill: #fff;
+	}
+}
+
+.raison {
+	font-size: 12pt;
+	width: 90%;
+	padding: 2em;
+	margin-top: 1em;
+	background: rgba(92 46 0 / 0.2);
+	border: 1px solid #5c2e00;
+	border-radius: 1em;
+	
+	
+}
+h1 {
+	font-size: 1.5em;
+	text-align: left;
+}
+p {
+	margin-top: 1.15em;
+	font-family: verdana, sans-serif;
+	line-height: 1.3;
+}
+
+
+
+}

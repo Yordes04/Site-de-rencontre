@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/accueil.css">
+        <link type="text/css" rel="stylesheet" href="/css/footer.css">
+    </head>
+    
+    <body>
+    <th:block th:replace="inclusion/header.html"></th:block>
+    <th:block th:replace="inclusion/Banner.html"></th:block>
+    <th:block th:replace="inclusion/Separateur.html"></th:block>
+        <div class="page-size">
+
+        <!-- Création des containers utilisateurs-->
+        <div class="user-container">
+
+
+
+
+
+
+
+
+            <!-- Code à répéter -->
+
+             <div class="user">
+
+                 <div class="user-image">
+
+                     <img src="images/photoProfil/<%= utilisateur.getImage()%>" alt="User 2">
+
+                     </div>
+
+                 <h3 class="user-name"><%= utilisateur.getPrenom()%> / <%= utilisateur.getAge()%></h3>
+
+                 <p class="user-description"><%= utilisateur.getDescription()%></p>
+                <p class="user-description"><%= utilisateur.getRegion()%></p>
+
+                 <div class="user-buttons">
+
+                     <!--bouton message-->
+
+                     <button class="message-button">Message</button>
+
+                     <!--Bouton j'aime-->
+
+                     <button class="heart-button">J'aime❤️</button>
+
+                     </div>
+
+                 </div>
+
+           <!-- Code à répéter -->
+
+
+
+
+
+
+
+
+
+
+        </div>
+                </div>
+    <th:block th:replace="inclusion/footer.html"></th:block>
+    </body>
+</html>

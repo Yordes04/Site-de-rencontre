@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  text-decoration: none;
+}
+footer{
+  width: 100%;
+  
+  bottom: 0;
+  left: 0;
+  background: #28353b;
+}
+footer .Contenant{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-Contenant: space-between;
+}
+footer .Contenant p,a{
+  color: #fff;
+}
+footer .Contenant .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .Contenant .abonner{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .Contenant p{
+  text-align: justify;
+}
+footer .Contenant .paragraphe .abonner{
+  margin: 24px 0 5px 0;
+}
+footer .Contenant .paragraphe i{
+  padding-right: 16px;
+}
+footer .Contenant .middle{
+  padding-left: 80px;
+}
+footer .Contenant .middle a{
+  line-height: 32px;
+}
+footer .Contenant .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .Contenant .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #fe6052;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #fe6052;
+  transition: all 0.3s ease-in-out;
+}
+.Contenant .right input[type="submit"]:hover{
+  background: none;
+  color:  #fe6052;
+}
+footer .Contenant .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.Contenant .media-icons a:hover{
+  border-color: #fe6052;
+}
+footer .bottom .reservé{
+  width: 100%;
+  text-align: center;
+  color: #282626;
+  padding: 20px 40px 5px 0;
+  background-color: #fff;
+  
+}
+
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #fe6052;
+}
+@media (max-width:1100px) {
+  footer .Contenant .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .Contenant .box{
+    width: 50%;
+  }
+  .Contenant .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .Contenant .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .Contenant .middle{
+    padding-left: 0;
+  }
+}
+
+
+.bottom{
+    background-color: white;
+    text-align: center;
+}

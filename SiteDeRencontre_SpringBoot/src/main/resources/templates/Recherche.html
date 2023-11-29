@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+            <link href="css/Presentation.css" rel="stylesheet" type="text/css">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/recherche.css">
+        <link rel="stylesheet" href="/css/footer.css">
+    </head>
+
+    <body>
+    <th:block th:replace="inclusion/header.html"></th:block>
+        <main>
+            <div class="descritpion">
+            <div>
+                <table>
+                    <tr>
+                        <th> <h4>Rechecher par son nom  </h4>  </th>
+                        <th> <h4>Rechecher par son nom utilisateur </h4>  </th>
+                        <th>  <h4>Rechecher par son Email  </h4></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form action="rechercheController" method="get" > 
+                                <input type="search" name="nom">
+                                <br> <input type="submit"  value="Chercher"/>
+                            </form></td>
+                        <td>
+                            <form action="rechercheController" method="get" > 
+                                <input type="search" name="nomUser">
+                                <br> <input type="submit"  value="Chercher"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="rechercheController" method="get" > 
+                                <input type="search" name="email">
+                                <br> <input type="submit"  value="Chercher"/>
+                            </form>
+                        </td>
+                    <tr>
+                </table>
+            </div> 
+            <div>
+                <table>
+                    <tr>               
+                        <th><h4>Filtrer par orientation </h4></th>
+                        <th><h4>Filtrer par passion </h4></th>                      
+                    </tr>
+                    <tr>
+                        <td>
+                            <form action="rechercheController" method="get">
+                                <select name="orientation" id="orientation">
+                                    <option value="heterosexuel">heterosexuel</option>
+                                    <option value="homosexuel">homosexuel</option>
+                                    <option value="bisexuel">bisexuel</option>
+                                </select>
+                                <br><br> <input type="submit" value="Filtrer">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="rechercheController" method="get">                                   
+                                <ul>
+                                    <li>  <label> <input type="checkbox" value="Sports" name="passion">Sports</label></li>
+                                    <li><label> <input type="checkbox" value="Cuisine" name="passion">Cuisine</label></li>
+                                    <li> <label> <input type="checkbox" value="Technologie" name="passion">Technologie</label> </li>                             
+                                    <li>   <label> <input type="checkbox" value="Mode" name="passion">Mode</label></li>
+                                </ul> </td>
+                        <td>   <ul>
+                                <li>  <label> <input type="checkbox" value="Voyage" name="passion">Voyage</label></li>
+                                <li>  <label> <input type="checkbox" value="Musique" name="passion">Musique</label></li>
+                                <li>  <label> <input type="checkbox" value="Cinema" name="passion">Cinema</label></li>
+                                <li>  <label> <input type="checkbox" value="Photographie" name="passion">Photographie</label></li>
+                                <li>  <label> <input type="checkbox" value="Animal" name="passion">Animal</label></li>
+                            </ul> </td>
+                        <td>  <ul>
+                                <li> <label> <input type="checkbox" value="Histoire" name="passion">Histoire</label></li>                              
+                                <li> <label> <input type="checkbox" value="Entrepreneuriat" name="passion">Entrepreneuriat</label></li>                             
+                                <li> <label> <input type="checkbox" value="Éducation" name="passion">Éducation</label></li>       
+                                <li> <label> <input type="checkbox" value="Jeux video" name="passion">Jeux video</label></li>
+                            </ul> </td>
+                        <td>  <ul>
+                                <li> <label> <input type="checkbox" value="Politique" name="passion">Politique</label></li>
+                                <li> <label> <input type="checkbox" value="Automobiles" name="passion">Automobiles</label></li>
+                                <li> <label> <input type="checkbox" value="Philosophie" name="passion">Philosophie</label></li>
+                                <li> <label> <input type="checkbox" value="Autre" name="passion">Autre</label></li>
+                            </ul> </td> 
+                        <td>
+                            <br> <input type="submit" value="Filtrer">
+                        </td>
+                        </form>
+
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <table style="width:79%">
+                <tr>
+                    <th>Id</th>                   
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                     <th>Nom utilisateur</th>
+                   <th>Sexe</th>
+                   <th>Age</th>
+                   <th>Email</th>
+                   
+                    <th>Orientation</th>
+                    <th>Photo</th>
+                    <th>Description</th> 
+                    <th>Role</th>                    
+                    
+                    <th>Region</th>
+                    
+                    
+                    
+                                          
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td> <%=user.getId()%> </td>
+
+                    <td><%=user.getNom()%> </td>
+                    <td><%=user.getPrenom()%>  </td>
+
+
+
+                    <td> <%=user.getNom_utilisateur()%> </td>                                                                               
+                    <td><%=user.getSexe()%> </td>
+                    <td><%=user.getAge()%> </td>
+                    <td><%=user.getEmail()%> </td>
+
+                    <td><%=user.getOrientation()%>  </td>
+                    
+                    <td>
+                        <img alt="user image" src="images/photoProfil/<%=user.getImage()%>" height="42" width="50"/> 
+                    </td> 
+                    <td><%=user.getDescription()%>  </td> 
+                    <td> <%=user.getRole()%> </td>
+                    <td><%=user.getRegion()%>  </td>
+                    <td><%=user.isActive()%> </td>
+
+                </tr>
+                <tr>
+                    <td> <%=utilisateur.getId()%> </td>
+
+                    <td><%=utilisateur.getNom()%> </td>
+                    <td><%=utilisateur.getPrenom()%>  </td>
+
+
+
+                    <td> <%=utilisateur.getNom_utilisateur()%> </td>                                                                               
+                    <td><%=utilisateur.getSexe()%> </td>
+                    <td><%=utilisateur.getAge()%> </td>
+                    <td><%=utilisateur.getEmail()%> </td>
+
+                    <td><%=utilisateur.getOrientation()%>  </td>
+                    
+                    <td>
+                        <img alt="user image" src="images/photoProfil/<%=utilisateur.getImage()%>" height="42" width="50"/> 
+                    </td> 
+                    <td><%=utilisateur.getDescription()%>  </td> 
+                    <td> <%=utilisateur.getRole()%> </td>
+                    <td><%=utilisateur.getRegion()%>  </td>
+                    <td><%=utilisateur.isActive()%> </td>
+
+                </tr>
+            </table>
+
+        </main>
+            </div>
+        <th:block th:replace="inclusion/footer.html"></th:block>
+    </body>
+
+</html>
